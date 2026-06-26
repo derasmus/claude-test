@@ -18,21 +18,21 @@ export function AddHabitForm({ onAdd }: AddHabitFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 mb-8">
+    <form onSubmit={handleSubmit} className="mb-6 flex gap-2">
       <input
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         maxLength={100}
-        placeholder="Add a new habit..."
-        className="flex-1 rounded-lg border border-gray-200 px-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 shadow-sm focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+        placeholder="Add a new habit…"
+        className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-800 placeholder-gray-400 shadow-sm focus:border-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-100 transition-shadow"
       />
       <button
         type="submit"
         disabled={!value.trim()}
-        className="rounded-lg bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+        className="rounded-xl bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-violet-700 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
       >
-        Add
+        + Add
       </button>
     </form>
   );
